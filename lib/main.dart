@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:pdf_example/controller/consts/text_style.dart';
+import 'package:pdf_example/controller/translation.dart';
 import 'package:pdf_example/view/home.dart';
 
 void main() {
@@ -10,13 +13,20 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       title: 'Pdf Example',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
+        fontFamily: regular,
+        appBarTheme: const AppBarTheme(
+          backgroundColor: Colors.transparent,
+          elevation: 0,
+        ),
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
+      translations: Messages(), // your translations
+      locale: const Locale('en', 'US'),
       home: const Home(),
     );
   }

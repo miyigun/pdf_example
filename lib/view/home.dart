@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pdf_example/controller/consts/text_style.dart';
 
 class Home extends StatelessWidget {
   const Home({super.key});
@@ -6,9 +7,14 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
-      body: const Center(
-        child: Text("Hello"),
+      backgroundColor: const Color(0xff070811),
+      appBar: AppBar(
+        automaticallyImplyLeading: false,
+        backgroundColor: const Color(0xff1F212C),
+        title: Text(
+          "Pdf Example",
+          style: myStyle(),
+        ),
       ),
     );
   }
