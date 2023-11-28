@@ -21,6 +21,10 @@ class Messages extends Translations {
       "Türkçe" : "Turkish",
       "Tema 1"  : "Theme 1",
       "Tema 2"  : "Theme 2",
+      "Pdf Bulunamadı!" : "Pdf not found!",
+      "Pdf Oluştur" : "Create Pdf",
+      "Pdf'yi düzenle"  : "Edit Pdf",
+
     },
     'tr_TR': {
       "Pdf App" : "Pdf Uygulaması",
@@ -39,6 +43,9 @@ class Messages extends Translations {
       "Turkish" : "Türkçe",
       "Theme 1" : "Tema 1",
       "Theme 2"  : "Tema 2",
+      "Pdf not found!"  : "Pdf Bulunamadı!",
+      "Create Pdf"  : "Pdf Oluştur",
+      "Edit Pdf"  : "Pdf'yi Düzenle",
     }
   };
 }

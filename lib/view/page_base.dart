@@ -4,21 +4,45 @@ import 'package:pdf_example/controller/consts/colors.dart';
 import 'package:pdf_example/controller/consts/text_style.dart';
 import 'package:pdf_example/controller/controller.dart';
 import 'package:pdf_example/view/pdf_in_device_tab.dart';
+import 'package:pdf_example/view/settings_tab.dart';
+import 'package:pdf_example/view/tools_tab.dart';
 
 var controller = Get.put(Controller());
 
-class PageBase extends StatelessWidget {
+class PageBase extends StatefulWidget {
   const PageBase({super.key});
 
+  @override
+  State<PageBase> createState() => _PageBaseState();
+}
+
+class _PageBaseState extends State<PageBase> with TickerProviderStateMixin {
+
+  @override
+  void initState() {
+    super.initState();
+    controller.tabController = TabController(length: 3, vsync: this);
+  }
+
+  @override
+  void dispose() {
+    controller.tabController.dispose();
+    super.dispose();
+  }
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
       length: 3,
+      initialIndex: 0,
       child: Scaffold(
-        backgroundColor: bgDarkColor,
+        backgroundColor: controller.apkTheme.value=="theme2"
+          ? bgDarkColor
+          : bgLightColor,
         appBar: AppBar(
           automaticallyImplyLeading: false,
-          backgroundColor: const Color(0xff1F212C),
+          backgroundColor: controller.apkTheme.value=="theme2"
+              ? bgColor
+              : bgWhiteColorLight,
           title: Text(
             "Pdf App".tr,
             style: myStyle(
@@ -28,9 +52,13 @@ class PageBase extends StatelessWidget {
             ),
           ),
           bottom: TabBar(
+            controller: controller.tabController,
             //isScrollable: true,
             dividerColor: bgDarkColor,
             labelColor: yellowColor,
+            labelStyle: myStyle(
+              size: 16
+            ),
             tabs: [
               Tab(
                 icon: const Icon(Icons.edit_document),
@@ -47,10 +75,13 @@ class PageBase extends StatelessWidget {
             ],
           ),
         ),
-        body: const SafeArea(
+        body: SafeArea(
           child: TabBarView(
-            children: <Widget>[
+            controller: controller.tabController,
+            children: const <Widget>[
               PdfInDeviceTab(),
+              ToolsTab(),
+              SettingsTab(),
             ],
           ),
         ),

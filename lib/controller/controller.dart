@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:pdf_example/controller/data.dart';
 
@@ -8,11 +9,15 @@ class Controller extends GetxController {
 
   var apkTheme="theme2".obs;
 
+  late TabController tabController;
+
   var searchTextIsOK=false.obs;
 
   var sortIsOK=true.obs;
 
   var currentIndex=0.obs;
+
+  var dataAllList=[].obs;
 
   void loadInitialData() {
     tableElements.add(titles);
