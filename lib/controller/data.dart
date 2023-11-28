@@ -1,3 +1,7 @@
+import 'package:pdf_example/view/pdf_in_device_tab.dart';
+import 'package:pdf_example/view/settings_tab.dart';
+import 'package:pdf_example/view/tools_tab.dart';
+
 List<List<String>> tableElements = [];
 
 List<String> titles = [
@@ -60,4 +64,10 @@ List<String> listElements = [
 String paragraph =
     "The flame does not illuminate itself as much as it illuminates other things. The wise are also like this. Friedrich Nietzsche";
 
+var listPages=[
+  const PdfInDeviceTab(),
+  const ToolsTab(),
+  const SettingsTab(),
+
+];
 

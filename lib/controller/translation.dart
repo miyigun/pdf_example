@@ -5,6 +5,8 @@ class Messages extends Translations {
   Map<String, Map<String, String>> get keys => {
     'en_US':
     {
+      "Pdf Uygulaması"  : "Pdf App",
+      "Cihaz" : "Device",
       "Araçlar" : "Tools",
       "Ayarlar"  : "Settings",
       "Dili Değiştir" : "Change Language",
@@ -21,6 +23,8 @@ class Messages extends Translations {
       "Tema 2"  : "Theme 2",
     },
     'tr_TR': {
+      "Pdf App" : "Pdf Uygulaması",
+      "Device"  :  "Cihaz",
       "Tools" : "Araçlar",
       "Settings"  : "Ayarlar",
       "Change Language" :"Dili Değiştir",

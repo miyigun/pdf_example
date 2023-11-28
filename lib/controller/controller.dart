@@ -12,6 +12,8 @@ class Controller extends GetxController {
 
   var sortIsOK=true.obs;
 
+  var currentIndex=0.obs;
+
   void loadInitialData() {
     tableElements.add(titles);
     tableElements.add(tableRow1);
