@@ -43,12 +43,13 @@ class _PageBaseState extends State<PageBase> with TickerProviderStateMixin {
           backgroundColor: controller.apkTheme.value=="theme2"
               ? bgColor
               : bgWhiteColorLight,
+          centerTitle: true,
           title: Text(
             "Pdf App".tr,
             style: myStyle(
                 family: regular2,
               color: yellowColor,
-              size: 24
+              size: 30
             ),
           ),
           bottom: TabBar(
