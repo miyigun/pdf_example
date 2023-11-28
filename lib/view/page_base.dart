@@ -3,7 +3,6 @@ import 'package:get/get.dart';
 import 'package:pdf_example/controller/consts/colors.dart';
 import 'package:pdf_example/controller/consts/text_style.dart';
 import 'package:pdf_example/controller/controller.dart';
-import 'package:pdf_example/controller/data.dart';
 import 'package:pdf_example/view/pdf_in_device_tab.dart';
 
 var controller = Get.put(Controller());
