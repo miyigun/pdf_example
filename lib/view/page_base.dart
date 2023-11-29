@@ -48,7 +48,9 @@ class _PageBaseState extends State<PageBase> with TickerProviderStateMixin {
             "Pdf App".tr,
             style: myStyle(
                 family: regular2,
-              color: yellowColor,
+                color: controller.apkTheme.value=="theme2"
+                    ? yellowColor
+                    :whiteColor,
               size: 30
             ),
           ),
@@ -56,7 +58,9 @@ class _PageBaseState extends State<PageBase> with TickerProviderStateMixin {
             controller: controller.tabController,
             //isScrollable: true,
             dividerColor: bgDarkColor,
-            labelColor: yellowColor,
+            labelColor: controller.apkTheme.value=="theme2"
+                ? yellowColor
+                  :whiteColor,
             labelStyle: myStyle(
               size: 16
             ),

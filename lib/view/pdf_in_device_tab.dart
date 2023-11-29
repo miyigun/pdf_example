@@ -65,7 +65,9 @@ class PdfInDeviceTab extends StatelessWidget {
             child: Text(
               "Pdf not found!".tr,
               style: myStyle(
-                color:  yellowColor,
+                color: controller.apkTheme.value=="theme2"
+                    ? yellowColor
+                    :whiteColor,
                 size: 24,
               ),
             ),

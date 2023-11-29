@@ -31,7 +31,9 @@ class ToolsTab extends StatelessWidget {
                   "Create Pdf".tr,
                   style: myStyle(
                     size: 24,
-                    color: yellowColor,
+                    color: controller.apkTheme.value=="theme2"
+                        ? yellowColor
+                        :whiteColor,
 
                   ),
                 ),
@@ -46,7 +48,9 @@ class ToolsTab extends StatelessWidget {
                   "Edit Pdf".tr,
                   style: myStyle(
                     size: 24,
-                    color: yellowColor,
+                    color: controller.apkTheme.value=="theme2"
+                        ? yellowColor
+                        :whiteColor,
 
                   ),
                 ),
